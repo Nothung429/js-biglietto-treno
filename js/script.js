@@ -8,19 +8,23 @@ console.log(passengerAge);
 let price = Number(kmNumber * 0.21)
 price = price.toFixed(2);
 console.log(price);
-document.getElementById("ticketprice").innerHTML = `Prezzo biglietto: ${price}€`
+document.getElementById("ticketprice").innerHTML = `Prezzo biglietto: ${price}€`;
 // 2. va applicato uno sconto del 20% per i minorenni
+// 3. va applicato uno sconto del 40% per gli over 65.
 if (passengerAge <= 18) {
     let discountYoung = Number((kmNumber * 0.21) * (4 / 5))
     discountYoung = discountYoung.toFixed(2);
     console.log(discountYoung);
     document.getElementById("ticketprice").innerHTML = `Prezzo biglietto (young18): ${discountYoung}€`
-}
-// 3. va applicato uno sconto del 40% per gli over 65.
-if (passengerAge >= 65) {
+} else if (passengerAge >= 65) {
     let discountOld = Number((kmNumber * 0.21) * (3 / 5))
     discountOld = discountOld.toFixed(2);
     console.log(discountOld);
     document.getElementById("ticketprice").innerHTML = `Prezzo biglietto (old65): ${discountOld}€`
+} else {
+    let price = Number(kmNumber * 0.21)
+    price = price.toFixed(2);
+    console.log(price);
+    document.getElementById("ticketprice").innerHTML = `Prezzo biglietto: ${price}€`;
 }
 // Prezzo finale con massimo due cifre decimali
