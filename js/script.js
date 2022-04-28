@@ -10,7 +10,7 @@ price = price.toFixed(2);
 console.log(price);
 // 2. va applicato uno sconto del 20% per i minorenni
 // 3. va applicato uno sconto del 40% per gli over 65.
-if (passengerAge <= 18) {
+if (passengerAge < 18) {
     discountYoung = Number((kmNumber * 0.21) * (4 / 5))
     discountYoung = discountYoung.toFixed(2);
     console.log(discountYoung);
