@@ -8,7 +8,6 @@ console.log(passengerAge);
 let price = Number(kmNumber * 0.21)
 price = price.toFixed(2);
 console.log(price);
-document.getElementById("ticketprice").innerHTML = `Prezzo biglietto: ${price}€`;
 // 2. va applicato uno sconto del 20% per i minorenni
 // 3. va applicato uno sconto del 40% per gli over 65.
 if (passengerAge <= 18) {
